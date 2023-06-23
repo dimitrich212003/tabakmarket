@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1039.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tabakjavafx.HelloController">
+   <children>
+      <AnchorPane layoutY="71.0" prefHeight="509.0" prefWidth="1041.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TableView fx:id="tvMain" layoutY="37.0" onMouseClicked="#getSelected" prefHeight="472.0" prefWidth="523.0">
+              <columns>
+                <TableColumn prefWidth="73.3333410024643" text="C1" />
+                <TableColumn prefWidth="77.3333511352539" text="C2" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnAdd" layoutX="927.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleBtnAddAction" prefHeight="40.0" prefWidth="90.0" text="Добавить" />
+            <Button fx:id="btnChange" layoutX="705.0" layoutY="427.0" mnemonicParsing="false" onAction="#handleBtnChangeAction" prefHeight="40.0" prefWidth="90.0" text="Изменить" />
+            <Button fx:id="btnDel" layoutX="705.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleBtnDeleteAction" prefHeight="40.0" prefWidth="90.0" text="Удалить" />
+            <ComboBox fx:id="comb" layoutX="588.0" layoutY="37.0" onAction="#handleBtnOpenAction" prefHeight="40.0" prefWidth="400.0" promptText="выберите таблицу" />
+            <TextField fx:id="addField" layoutX="550.0" layoutY="120.0" prefHeight="40.0" prefWidth="467.0" />
+            <Text layoutX="550.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="введите значения через запятую" wrappingWidth="192.6666259765626" />
+            <TextField fx:id="ItemChange1" layoutX="540.0" layoutY="208.0" />
+            <TextField fx:id="ItemChange2" layoutX="540.0" layoutY="242.0" />
+            <TextField fx:id="ItemChange3" layoutX="540.0" layoutY="276.0" />
+            <TextField fx:id="ItemChange4" layoutX="540.0" layoutY="310.0" />
+            <TextField fx:id="ItemChange5" layoutX="540.0" layoutY="343.0" />
+            <TextField fx:id="ItemChange6" layoutX="540.0" layoutY="376.0" />
+            <TextField fx:id="ItemChange7" layoutX="540.0" layoutY="409.0" />
+            <TextField fx:id="ItemChange8" layoutX="540.0" layoutY="442.0" />
+            <TextField fx:id="Search" layoutX="19.0" layoutY="6.0" onKeyReleased="#filterData" prefHeight="25.0" prefWidth="487.0" promptText="поиск" />
+            <Button fx:id="join1" layoutX="993.0" layoutY="324.0" mnemonicParsing="false" onAction="#joinSearch" text="1" />
+            <Button fx:id="join2" layoutX="993.0" layoutY="362.0" mnemonicParsing="false" onAction="#joinSearch2" text="2" />
+            <Button fx:id="join3" layoutX="994.0" layoutY="402.0" mnemonicParsing="false" onAction="#joinSearch3" text="3" />
+            <Button fx:id="join4" layoutX="994.0" layoutY="461.0" mnemonicParsing="false" onAction="#joinSearch4" text="4" />
+            <TextField fx:id="joinSearch" layoutX="811.0" layoutY="289.0" prefHeight="25.0" prefWidth="204.0" promptText="поиск по связанным таблицам" />
+            <Text layoutX="809.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="товар, поставленный поставщиком (имя поставщика)" wrappingWidth="184.111083984375" />
+            <Text layoutX="808.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="товар, купленный покупателем (логин покупателя)" wrappingWidth="184.111083984375" />
+            <Text layoutX="808.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id товаров, что были поставлены на склад с (дата)" wrappingWidth="184.111083984375" />
+            <Text layoutX="808.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="номера тел. покупателей товара с сод. ник. больше (сод. ник.) и сорт. их по фамилиям в алф. порядке" wrappingWidth="184.111083984375" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnClose" layoutX="944.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleBtnCloseAction" style="-fx-background-color: #fff;" text="закрыть" />
+      <Label layoutX="23.0" layoutY="18.0" text="Tabak Shop" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
